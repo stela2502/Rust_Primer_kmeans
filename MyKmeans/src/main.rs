@@ -21,6 +21,6 @@ fn main() {
 
     let opts: Opts = Opts::parse();
 
-    let data = MyKmeans::read_tsv( &opts.file, 17, 256 );
+    let data = MyKmeans::read_tsv( &opts.file );
 
 }

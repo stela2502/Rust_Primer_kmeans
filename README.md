@@ -26,4 +26,4 @@ cargo new MyKmeans --bin
 This will create a folder names MyKmeans and put a Cargo.toml and a src folder into that.
 The Cargo.toml is very important as all dependencies will go there.
 
-The src/main.rs is where we will later code the command line tool, and we need to create a lob.rs file that will contain our library.
+The src/main.rs is where we will later code the command line tool, and we need to create a lib.rs file that will contain our library.

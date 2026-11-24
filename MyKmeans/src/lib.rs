@@ -4,7 +4,7 @@ use csv::ReaderBuilder;
 
 //https://docs.rs/csv/latest/csv/
 
-pub fn read_tsv( fname:&str, ncol: usize, nrow: usize ) ->  Result< Vec<Vec<f32>>, &str>  {
+pub fn read_tsv( fname:&str ) ->  Result< Vec<Vec<f32>>, &str>  {
     // Build the CSV reader and iterate over each record.
 
     let rdr = ReaderBuilder::new()
@@ -13,7 +13,7 @@ pub fn read_tsv( fname:&str, ncol: usize, nrow: usize ) ->  Result< Vec<Vec<f32>
 
     let mut i = 0;
 
-    let mut res: Vec<Vec<f32>> = vec!( vec!(0.0; nrow); ncol );
+    let mut res: Vec<Vec<f32>> = Vec::new();
 
     if let mut records = rdr.expect("REASON").records(){
     	while let Some(result) = records.next() {
